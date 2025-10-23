@@ -2,16 +2,21 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-
-  nitro: {
-    preset: 'bun'
-  },
-
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/test-utils',
-    '@nuxt/ui'
-  ]
+    '@nuxt/ui',
+  ],
+
+  nitro: {
+    preset: 'bun',
+  },
+
+  vite: {
+    build: {
+      sourcemap: false,
+    },
+  },
 })
